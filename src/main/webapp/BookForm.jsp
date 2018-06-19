@@ -20,6 +20,7 @@
   <c:if test="${book == null}">
     <form name="book_form" method="post" action="insert">
   </c:if>
+
     <h2>
       <c:if test="${book != null}">
         Edit Book Form
@@ -28,6 +29,7 @@
         New Book Form
       </c:if>
     </h2>
+
       <p><label>Title:</label>
       <c:if test="${book != null}">
         <input type="hidden" name="id" value="<c:out value='${book.id}' />" />
