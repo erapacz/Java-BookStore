@@ -38,7 +38,6 @@
       <p><label>Price:</label>
       <input type="text" name="bookprice" value="<c:out value='${book.price}' />" /></p>
   	  <p><input type="submit" value="Submit"></p>
-    </c:if>
 	</form>
 	</div>
 </body>
