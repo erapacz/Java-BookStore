@@ -122,11 +122,9 @@ public class ControllerServlet extends HttpServlet {
 	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
 		  throws ServletException, IOException {
 		int id = Integer.parseInt(request.getParameter("id"));
-
-		Book newBook = bookDAO.getBook(id);
+		Book existingBook = bookDAO.getBook(id);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/BookForm.jsp");
-
-		request.setAttribute("book", newBook);
+		request.setAttribute("book", existingBook);
 		dispatcher.forward(request, response);
 	}
 
